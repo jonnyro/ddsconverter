@@ -1,4 +1,4 @@
 ddsconverter
 ============
 
-Graphical DDS Conversion App
+Graphical DDS Conversion App with network parallel compression
