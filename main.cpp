@@ -69,6 +69,13 @@ int main(int argc, char** argv)
     /* When the button receives the "clicked" signal, it will call the
      * function hello() passing it NULL as its argument. The hello()
      * function is defined above. */
+    g_signal_connect(	button, "clicked",
+			G_CALLBACK (hello), NULL);
+
+    /* This will cause the window to be destroyed by calling
+     * gtk_widget_destroy(window) when "clicked".  Again, the destroy
+     * signal could come from here, or the window manager. */
+
     g_signal_connect_swapped (	button, "clicked",
                                G_CALLBACK (gtk_widget_destroy),
                                window);
